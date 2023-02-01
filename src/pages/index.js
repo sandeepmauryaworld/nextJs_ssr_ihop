@@ -25,13 +25,14 @@ const Home = ({ data }) => {
                 <div className="">
                   <div className="">
                     <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden grid-cols-3 cardcss">
-                      <Image
+                   <Link href={`/blog/${curEle.lid}`}> <Image
                         className="lg:h-48 md:h-36 w-full object-cover object-center"
                         width={550}
                         height={337}
                         src={curEle.logo}
                         alt="blog"
                       />
+                      </Link>  
                       <div className="p-6">
                         <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                           Country {curEle.location_name}
@@ -46,21 +47,11 @@ const Home = ({ data }) => {
                           {curEle.address_1}
                         </p>
                         <div className="flex items-center flex-wrap ">
-                          <p className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
-                            Learn More {curEle.address_1}
-                            <svg
-                              className="w-4 h-4 ml-2"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              strokeWidth="33"
-                              fill="none"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            >
-                              <path d="M5 12h14"></path>
-                              <path d="M12 5l7 7-7 7"></path>
-                            </svg>
+                       <Link href={`/blog/${curEle.lid}`} >  <p className="	text-decoration-line underline text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                            Learn More {curEle.address_1}..
+                            
                           </p>
+                          </Link> 
                         </div>
                       </div>
                     </div>
