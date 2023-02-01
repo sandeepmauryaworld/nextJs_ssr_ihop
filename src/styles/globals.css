@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .cardcss{
- 
-
-    /* flex-wrap: wrap; */
-    display: flex;
-    display: table;
-    justify-content:center
+    width: fit-content;
 }
